@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>move</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+</head>
+
+<body style="width: 100%; height: 100%; margin: 0;position:relative;">
+    <div style="background: yellow; height: 30%;">
+    </div>
+
+    <div style="background: red; height: 10%;position:absolute;top:25%;left:0;width:100%;" id="stage">
+    </div>
+
+    <div style="background: blue; height: 70%;">
+    </div>
+
+    <script>
+    // get a reference to an element
+	var stage = document.getElementById('stage');
+
+	// create a manager for that element
+	var mc = new Hammer.Manager(stage);
+
+	// create a recognizer
+	var Pan = new Hammer.Pan();
+
+	// add the recognizer
+	mc.add(Pan);
+
+	// subscribe to events
+	mc.on('pan', function(e) {
+		// do something cool
+		console.log(e);
+	});
+    </script>
+</body>
+
+</html>

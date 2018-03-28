@@ -1,0 +1,6 @@
+﻿User-agent:*
+Disallow:/reg/law
+         /iyunwen/new/product.html
+         /findpwd/forgetPwd
+
+Sitemap: http://www.faqrobot.org/sitemap.xml
